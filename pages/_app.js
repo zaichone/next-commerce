@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/styles.scss'
 import {StoreProvider} from '../components/Store';
 import NProgress from 'nprogress';
 import Router from 'next/router';
@@ -14,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     if(jssStyles){
       jssStyles.parentElement.removeChild(jssStyles);
     }
-  })
+  },[])
   return <StoreProvider><Component {...pageProps} /></StoreProvider>
 }
 
